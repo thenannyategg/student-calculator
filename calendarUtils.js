@@ -1,25 +1,5 @@
-const argentinaHolidays = [
-  { date: '2023-01-01', title: 'New Year\'s Day' },
-  { date: '2023-02-20', title: 'Carnival Monday' },
-  { date: '2023-02-21', title: 'Carnival Tuesday' },
-  { date: '2023-03-24', title: 'Day of Remembrance for Truth and Justice' },
-  // Add other holidays here
-];
+const moment = require('moment');
 
-function addArgentinaHolidays(events) {
-  argentinaHolidays.forEach(holiday => {
-    if (!events.find(event => event.date === holiday.date)) {
-      events.push(holiday);
-    }
-  });
-}
-
-function calculateCourseEndDate(startDate, numberOfClasses, events) {
-  const courseStart = moment(startDate);
-  const holidays = events.map(event => event.date);
-
-  let classesHeld = 0;
-  let currentDate = course
 const argentinaHolidays = [
   { date: '2023-01-01', title: 'New Year\'s Day' },
   { date: '2023-02-20', title: 'Carnival Monday' },
@@ -59,7 +39,7 @@ function calculateCourseEndDate(startDate, numberOfClasses, events) {
   return currentDate.format('YYYY-MM-DD');
 }
 
-export {
+module.exports = {
   addArgentinaHolidays,
   calculateCourseEndDate,
 };
