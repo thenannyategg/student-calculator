@@ -1,4 +1,4 @@
-import { addArgentinaHolidays, calculateCourseEndDate } from './calendarUtils.js';
+const { addArgentinaHolidays, calculateCourseEndDate } = require('./calendarUtils.js');
 
 document.getElementById('course-form').addEventListener('submit', (event) => {
   event.preventDefault();
