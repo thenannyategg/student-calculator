@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course End Date Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Course End Date Calculator</h1>
+    <form id="course-form">
+      <label for="start-date">Course Start Date:</label>
+      <input type="date" id="start-date" required>
+      <label for="number-of-classes">Number of Classes:</label>
+      <input type="number" id="number-of-classes" min="1" required>
+      <button type="submit">Calculate</button>
+    </form>
+    <div id="result" class="hidden">
+      <p>Course Start Date: <span id="result-start-date"></span></p>
+      <p>Course End Date: <span id="result-end-date"></span></p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="calendarUtils.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
